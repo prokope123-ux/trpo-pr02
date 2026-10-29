@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img">
+  <title>Иллюстрация курса по инструментам разработчика</title>
+  <rect width="320" height="180" fill="#fff0cc"/>
+  <circle cx="110" cy="60" r="14" fill="#fff" stroke="#e0a526" stroke-width="3"/>
+  <circle cx="110" cy="120" r="14" fill="#fff" stroke="#e0a526" stroke-width="3"/>
+  <circle cx="210" cy="90" r="14" fill="#e0a526"/>
+  <path d="M110 74v32M124 62c40 0 56 14 72 24M124 118c40 0 56-14 72-24" fill="none" stroke="#e0a526" stroke-width="3" stroke-linecap="round"/>
+</svg>

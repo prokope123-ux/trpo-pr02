@@ -1,0 +1,13 @@
+{
+  "name": "trpo-pr02",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Практическая работа №2. Адаптивный каталог на HTML и SCSS",
+  "scripts": {
+    "build": "sass --style=expanded --no-source-map scss/styles.scss css/styles.css",
+    "watch": "sass --watch --style=expanded --no-source-map scss/styles.scss css/styles.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

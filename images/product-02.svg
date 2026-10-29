@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img">
+  <title>Иллюстрация курса по backend-разработке</title>
+  <rect width="320" height="180" fill="#dcf5e8"/>
+  <g fill="#fff" stroke="#9adbb9" stroke-width="2">
+    <rect x="70" y="26" width="180" height="36" rx="8"/><rect x="70" y="72" width="180" height="36" rx="8"/><rect x="70" y="118" width="180" height="36" rx="8"/>
+  </g>
+  <g fill="#12794a"><circle cx="92" cy="44" r="6"/><circle cx="92" cy="90" r="6"/><circle cx="92" cy="136" r="6"/></g>
+  <g fill="#9adbb9"><rect x="110" y="40" width="100" height="8" rx="4"/><rect x="110" y="86" width="120" height="8" rx="4"/><rect x="110" y="132" width="80" height="8" rx="4"/></g>
+</svg>
