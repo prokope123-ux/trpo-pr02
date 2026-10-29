@@ -1,0 +1,32 @@
+@use "../variables" as *;
+
+.info {
+  margin-block: $space-xl;
+  padding: $space-lg;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+
+  &__title {
+    margin-bottom: $space-sm;
+    font-size: 1.25rem;
+  }
+
+  &__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+
+    dt {
+      font-size: 0.85rem;
+      color: $color-muted;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}

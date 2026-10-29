@@ -1,0 +1,40 @@
+@use "../variables" as *;
+
+.site-header {
+  background: $color-dark;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm $space-lg;
+    padding-block: 0.75rem;
+  }
+}
+
+.brand {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    color: #d4d9ea;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

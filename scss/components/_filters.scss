@@ -1,0 +1,37 @@
+@use "../variables" as *;
+
+.filters {
+  &__form {
+    padding: $space-lg;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius;
+  }
+
+  &__title {
+    margin-bottom: $space-md;
+    font-size: 1.125rem;
+  }
+
+  &__group {
+    margin: 0 0 1.25rem;
+    padding: 0;
+    border: 0;
+
+    legend {
+      margin-bottom: $space-sm;
+      font-weight: 600;
+    }
+  }
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding-block: 0.15rem;
+}
+
+.catalog-area .empty {
+  display: none;
+}

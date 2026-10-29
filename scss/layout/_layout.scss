@@ -1,0 +1,39 @@
+@use "../variables" as *;
+
+.page-head {
+  padding-block: 2rem $space-lg;
+
+  &__title {
+    margin-bottom: $space-sm;
+    font-size: 2rem;
+  }
+
+  &__lead {
+    max-width: 42rem;
+    color: $color-muted;
+  }
+}
+
+// Панель фильтров слева, каталог справа
+.layout {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: $space-lg;
+  align-items: start;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-area {
+  &__title {
+    margin-bottom: $space-md;
+    font-size: 1.5rem;
+  }
+
+  &__count {
+    font-weight: 400;
+    color: $color-muted;
+  }
+}

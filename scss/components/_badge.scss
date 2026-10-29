@@ -1,0 +1,12 @@
+@use "../variables" as *;
+
+.badge {
+  align-self: flex-start;
+  margin-bottom: $space-sm;
+  padding: 0.1rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-accent-dark;
+  background: $color-accent-soft;
+  border-radius: 999px;
+}

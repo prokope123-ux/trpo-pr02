@@ -1,0 +1,28 @@
+// Значения перенесены из data/theme.json. Единственное место, где они заданы.
+
+// Цвета (theme.json → colors)
+$color-background: #f5f6fb;
+$color-surface: #ffffff;
+$color-text: #1f2430;
+$color-muted: #5d6678;
+$color-accent: #315efb;
+$color-accent-dark: #1f43c9;
+$color-accent-soft: #e8eeff;
+$color-border: #dfe3ee;
+$color-dark: #12172b;
+$color-success: #12794a;
+$color-success-soft: #dcf5e8;
+$color-warning: #8a5a00;
+$color-warning-soft: #fff0cc;
+
+// Радиус и интервалы (theme.json → radius, spacing)
+$radius: 12px;
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2.5rem;
+
+// Контейнер и шрифт (theme.json → container, fontFamily)
+$container-width: 74rem;
+$font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;

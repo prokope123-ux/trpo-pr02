@@ -1,0 +1,16 @@
+@use "../variables" as *;
+
+.button {
+  padding: 0.6rem 1.2rem;
+  font: inherit;
+  font-weight: 600;
+  color: $color-accent-dark;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid $color-accent;
+  border-radius: $radius;
+
+  &:hover {
+    background: $color-accent-soft;
+  }
+}

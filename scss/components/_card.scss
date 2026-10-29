@@ -1,0 +1,60 @@
+@use "../variables" as *;
+
+// Сетка карточек: число колонок подбирается автоматически
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1.25rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: $space-md;
+  }
+
+  &__title {
+    margin-bottom: $space-sm;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    flex: 1;
+    font-size: 0.95rem;
+    color: $color-muted;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0 0 0.75rem;
+
+    dt {
+      font-size: 0.8rem;
+      color: $color-muted;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+
+  &__rating {
+    margin: 0;
+    font-weight: 600;
+  }
+}

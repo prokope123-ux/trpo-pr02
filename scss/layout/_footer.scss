@@ -1,0 +1,17 @@
+@use "../variables" as *;
+
+.site-footer {
+  padding-block: 2rem;
+  color: #c9cfdf;
+  background: $color-dark;
+
+  &__title {
+    margin-bottom: $space-sm;
+    font-size: 1.125rem;
+    color: #fff;
+  }
+
+  p {
+    margin: 0;
+  }
+}

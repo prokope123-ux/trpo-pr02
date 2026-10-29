@@ -1,0 +1,66 @@
+@use "../variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  line-height: 1.6;
+  color: $color-text;
+  background: $color-background;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.25;
+  color: $color-dark;
+}
+
+p {
+  margin: 0 0 $space-md;
+}
+
+a {
+  color: $color-accent;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid $color-accent;
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: $space-md;
+  top: -4rem;
+  padding: $space-sm $space-md;
+  background: $color-surface;
+
+  &:focus {
+    top: $space-md;
+  }
+}
