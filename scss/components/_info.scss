@@ -1,11 +1,9 @@
 @use "../variables" as *;
+@use "../mixins" as *;
 
 .info {
   margin-block: $space-xl;
-  padding: $space-lg;
-  background: $color-surface;
-  border: 1px solid $color-border;
-  border-radius: $radius;
+  @include surface($space-lg);
 
   &__title {
     margin-bottom: $space-sm;

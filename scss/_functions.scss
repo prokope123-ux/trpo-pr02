@@ -1,0 +1,7 @@
+@use "sass:math";
+
+// Переводит пиксели в rem (база 16px), чтобы размеры не писались вручную в двух единицах.
+// rem(240) → 15rem
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}

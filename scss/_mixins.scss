@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "variables" as *;
+
+// Медиазапрос по имени точки из $breakpoints
+@mixin respond($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Видимое кольцо фокуса для клавиатурной навигации
+@mixin focus-ring {
+  outline: 3px solid $color-accent;
+  outline-offset: 3px;
+}
+
+// Белая поверхность с рамкой и скруглением: карточка, панель, инфоблок
+@mixin surface($padding: 0) {
+  padding: $padding;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+}
+
+// Адаптивный контейнер ограниченной ширины
+@mixin container {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding-inline: $space-md;
+}

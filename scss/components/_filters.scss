@@ -1,16 +1,29 @@
+@use "sass:map";
 @use "../variables" as *;
+@use "../functions" as *;
+@use "../mixins" as *;
 
 .filters {
   &__form {
-    padding: $space-lg;
-    background: $color-surface;
-    border: 1px solid $color-border;
-    border-radius: $radius;
+    @include surface($space-lg);
+
+    // Планшет: панель над каталогом, группы фильтров в ряд
+    @include respond(laptop) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: $space-md $space-xl;
+    }
   }
 
   &__title {
     margin-bottom: $space-md;
     font-size: 1.125rem;
+
+    @include respond(laptop) {
+      flex: 1 1 100%;
+      margin-bottom: 0;
+    }
   }
 
   &__group {
@@ -22,6 +35,10 @@
       margin-bottom: $space-sm;
       font-weight: 600;
     }
+
+    @include respond(laptop) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -32,6 +49,34 @@
   padding-block: 0.15rem;
 }
 
-.catalog-area .empty {
+// ---------- Фильтрация без JavaScript ----------
+// Состояние чекбоксов и радиокнопок читается через :has() на общем предке .layout.
+
+// Снятая категория скрывает свои карточки (правило на каждый ключ карты $categories)
+@each $name in map.keys($categories) {
+  .layout:has(#cat-#{$name}:not(:checked)) .card[data-category="#{$name}"] {
+    display: none;
+  }
+}
+
+// Выбранный уровень скрывает карточки другого уровня
+@each $level in $levels {
+  .layout:has(#level-#{$level}:checked) .card:not([data-level="#{$level}"]) {
+    display: none;
+  }
+}
+
+// Пустое состояние: ни одна категория не выбрана
+.empty {
   display: none;
+  padding: $space-xl $space-lg;
+  text-align: center;
+  color: $color-muted;
+  background: $color-surface;
+  border: 1px dashed $color-border;
+  border-radius: $radius;
+}
+
+.layout:not(:has(.filter-category:checked)) .empty {
+  display: block;
 }

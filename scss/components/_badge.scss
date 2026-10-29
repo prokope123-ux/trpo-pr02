@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "../variables" as *;
 
 .badge {
@@ -9,4 +10,13 @@
   color: $color-accent-dark;
   background: $color-accent-soft;
   border-radius: 999px;
+}
+
+// Модификаторы по категориям генерируются из карты $categories:
+// .badge--frontend, .badge--backend, .badge--tools
+@each $name, $pair in $categories {
+  .badge--#{$name} {
+    color: list.nth($pair, 1);
+    background: list.nth($pair, 2);
+  }
 }

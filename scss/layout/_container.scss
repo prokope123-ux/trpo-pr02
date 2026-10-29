@@ -1,8 +1,5 @@
-@use "../variables" as *;
+@use "../mixins" as *;
 
 .container {
-  width: 100%;
-  max-width: $container-width;
-  margin-inline: auto;
-  padding-inline: $space-md;
+  @include container;
 }
