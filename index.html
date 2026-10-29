@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Адаптивный каталог учебных курсов кафедры индустриального программирования.">
+  <title>Каталог курсов кафедры</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalog">Перейти к каталогу</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">Каталог курсов</a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="#catalog">Курсы</a></li>
+          <li><a class="main-nav__link" href="#about">О каталоге</a></li>
+          <li><a class="main-nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <div class="page-head">
+      <h1 class="page-head__title">Каталог курсов кафедры</h1>
+      <p class="page-head__lead">Курсы по frontend, backend и инструментам разработчика. Выберите категорию и уровень, чтобы сузить список.</p>
+    </div>
+
+    <div class="layout">
+      <aside class="filters" aria-labelledby="filters-title">
+        <form class="filters__form" action="#catalog" method="get">
+          <h2 class="filters__title" id="filters-title">Фильтры</h2>
+
+          <fieldset class="filters__group">
+            <legend>Категория</legend>
+            <label class="choice"><input class="filter-category" type="checkbox" id="cat-frontend" name="category" value="frontend" checked> Frontend</label>
+            <label class="choice"><input class="filter-category" type="checkbox" id="cat-backend" name="category" value="backend" checked> Backend</label>
+            <label class="choice"><input class="filter-category" type="checkbox" id="cat-tools" name="category" value="tools" checked> Инструменты</label>
+          </fieldset>
+
+          <fieldset class="filters__group">
+            <legend>Уровень</legend>
+            <label class="choice"><input type="radio" id="level-all" name="level" value="all" checked> Любой</label>
+            <label class="choice"><input type="radio" id="level-basic" name="level" value="basic"> Базовый</label>
+            <label class="choice"><input type="radio" id="level-advanced" name="level" value="advanced"> Продвинутый</label>
+          </fieldset>
+
+          <button class="button button--ghost" type="reset">Сбросить фильтры</button>
+        </form>
+      </aside>
+
+      <section class="catalog-area" id="catalog" aria-labelledby="catalog-title">
+        <h2 class="catalog-area__title" id="catalog-title">Курсы <span class="catalog-area__count">(12)</span></h2>
+
+        <p class="empty" role="status">Ничего не найдено. Отметьте хотя бы одну категорию.</p>
+
+        <div class="catalog">
+          <article class="card" id="course-html-semantics" data-category="frontend" data-level="basic">
+            <img class="card__image" src="images/product-01.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Семантическая вёрстка HTML»">
+            <div class="card__body">
+              <p class="badge badge--frontend">Frontend</p>
+              <h3 class="card__title">Семантическая вёрстка HTML</h3>
+              <p class="card__text">Структура документа, формы, таблицы и доступность без лишних div.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>24</dd></div>
+                <div><dt>Мест</dt><dd>30</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.8 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-css-grid-flex" data-category="frontend" data-level="basic">
+            <img class="card__image" src="images/product-01.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «CSS Grid и Flexbox»">
+            <div class="card__body">
+              <p class="badge badge--frontend">Frontend</p>
+              <h3 class="card__title">CSS Grid и Flexbox</h3>
+              <p class="card__text">Адаптивные раскладки, перестроение колонок и работа с медиазапросами.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>30</dd></div>
+                <div><dt>Мест</dt><dd>28</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.7 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-scss-architecture" data-category="frontend" data-level="advanced">
+            <img class="card__image" src="images/product-01.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Архитектура стилей на SCSS»">
+            <div class="card__body">
+              <p class="badge badge--frontend">Frontend</p>
+              <h3 class="card__title">Архитектура стилей на SCSS</h3>
+              <p class="card__text">Переменные, миксины, partial-файлы и компиляция в CSS.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Продвинутый</dd></div>
+                <div><dt>Часов</dt><dd>28</dd></div>
+                <div><dt>Мест</dt><dd>20</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.6 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-bootstrap-ui" data-category="frontend" data-level="basic">
+            <img class="card__image" src="images/product-01.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Интерфейсы на Bootstrap»">
+            <div class="card__body">
+              <p class="badge badge--frontend">Frontend</p>
+              <h3 class="card__title">Интерфейсы на Bootstrap</h3>
+              <p class="card__text">Сетка, компоненты и настройка темы готового UI-набора.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>26</dd></div>
+                <div><dt>Мест</dt><dd>25</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.4 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-vue-components" data-category="frontend" data-level="advanced">
+            <img class="card__image" src="images/product-01.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Компоненты Vue.js»">
+            <div class="card__body">
+              <p class="badge badge--frontend">Frontend</p>
+              <h3 class="card__title">Компоненты Vue.js</h3>
+              <p class="card__text">Реактивность, компонентный подход и маршрутизация.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Продвинутый</dd></div>
+                <div><dt>Часов</dt><dd>48</dd></div>
+                <div><dt>Мест</dt><dd>18</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.9 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-php-forms" data-category="backend" data-level="basic">
+            <img class="card__image" src="images/product-02.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «PHP: формы и валидация»">
+            <div class="card__body">
+              <p class="badge badge--backend">Backend</p>
+              <h3 class="card__title">PHP: формы и валидация</h3>
+              <p class="card__text">Приём данных формы, проверка на сервере и вывод ошибок.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>36</dd></div>
+                <div><dt>Мест</dt><dd>24</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.5 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-php-oop" data-category="backend" data-level="advanced">
+            <img class="card__image" src="images/product-02.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «PHP: ООП и структура приложения»">
+            <div class="card__body">
+              <p class="badge badge--backend">Backend</p>
+              <h3 class="card__title">PHP: ООП и структура приложения</h3>
+              <p class="card__text">Классы, namespaces и разделение приложения на слои.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Продвинутый</dd></div>
+                <div><dt>Часов</dt><dd>42</dd></div>
+                <div><dt>Мест</dt><dd>16</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.6 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-sql-basics" data-category="backend" data-level="basic">
+            <img class="card__image" src="images/product-02.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Основы SQL и баз данных»">
+            <div class="card__body">
+              <p class="badge badge--backend">Backend</p>
+              <h3 class="card__title">Основы SQL и баз данных</h3>
+              <p class="card__text">Таблицы, выборки, связи и первые запросы из приложения.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>32</dd></div>
+                <div><dt>Мест</dt><dd>26</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.7 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-rest-api" data-category="backend" data-level="advanced">
+            <img class="card__image" src="images/product-02.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Проектирование REST API»">
+            <div class="card__body">
+              <p class="badge badge--backend">Backend</p>
+              <h3 class="card__title">Проектирование REST API</h3>
+              <p class="card__text">Маршруты, коды ответов, JSON и документирование интерфейса.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Продвинутый</dd></div>
+                <div><dt>Часов</dt><dd>36</dd></div>
+                <div><dt>Мест</dt><dd>18</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.8 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-git-basics" data-category="tools" data-level="basic">
+            <img class="card__image" src="images/product-03.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Git: ветки и коммиты»">
+            <div class="card__body">
+              <p class="badge badge--tools">Инструменты</p>
+              <h3 class="card__title">Git: ветки и коммиты</h3>
+              <p class="card__text">Репозиторий, осмысленные коммиты, ветки и публикация проекта.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>12</dd></div>
+                <div><dt>Мест</dt><dd>40</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.9 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-devtools" data-category="tools" data-level="basic">
+            <img class="card__image" src="images/product-03.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Отладка в DevTools»">
+            <div class="card__body">
+              <p class="badge badge--tools">Инструменты</p>
+              <h3 class="card__title">Отладка в DevTools</h3>
+              <p class="card__text">Elements, Console, Network и проверка адаптивности.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Базовый</dd></div>
+                <div><dt>Часов</dt><dd>10</dd></div>
+                <div><dt>Мест</dt><dd>40</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.5 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+          <article class="card" id="course-build-automation" data-category="tools" data-level="advanced">
+            <img class="card__image" src="images/product-03.svg" width="320" height="180" loading="lazy" alt="Иллюстрация курса «Сборка и автоматизация проекта»">
+            <div class="card__body">
+              <p class="badge badge--tools">Инструменты</p>
+              <h3 class="card__title">Сборка и автоматизация проекта</h3>
+              <p class="card__text">npm-скрипты, компиляция SCSS и режим наблюдения за файлами.</p>
+              <dl class="card__meta">
+                <div><dt>Уровень</dt><dd>Продвинутый</dd></div>
+                <div><dt>Часов</dt><dd>20</dd></div>
+                <div><dt>Мест</dt><dd>15</dd></div>
+              </dl>
+              <p class="card__rating"><span aria-hidden="true">★</span> 4.3 <span class="visually-hidden">из 5</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="info" id="about" aria-labelledby="about-title">
+      <h2 class="info__title" id="about-title">О каталоге</h2>
+      <p class="info__text">Все данные карточек взяты из файла <code>data/catalog.csv</code>, оформление — из <code>data/theme.json</code>.</p>
+      <dl class="info__stats">
+        <div><dt>Курсов</dt><dd>12</dd></div>
+        <div><dt>Всего часов</dt><dd>344</dd></div>
+        <div><dt>Категории</dt><dd>3</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+      <h2 class="site-footer__title">Контакты</h2>
+      <p>Кафедра индустриального программирования, Институт перспективных технологий и индустриального программирования.</p>
+    </div>
+  </footer>
+</body>
+</html>
